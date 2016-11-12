@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo $GLOBALS['setings']['title']; ?></title>
+
+    <!--<style><?php //include($_SERVER['DOCUMENT_ROOT']."/css/styles.css"); ?></style>-->
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+</head>
+<body id="bg_color" class=" cms-index-index cms-home">
+
+<div class="wrapper">
+    <div class="page">
+
+        <div class="header-container">
+            <div class="quick-access">
+                <ul class="menu">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+
+
+                <div class="header">
+                    <ul id="logo">
+                        <div class="nav-container">
+                            <?php  include("layouts/menu.html"); ?>
+                        </div>
+                    </ul>
+                </div>
+                <div><a id="cart" href="?controler=Cart"><img src="../img/cart.png"><span style="color: #fff;  background: #F66; border-radius: 25px; padding: 5px">
+                    <?php echo $this->countCart(); ?>
+                    </span></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="box-center">
+            <?php include($this->page); ?>
+        </div>
+
+    </div>
+</div>
+    <script type="text/javascript" src="../js/engine.js"></script>
+
+</body>
+</html>

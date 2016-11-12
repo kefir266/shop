@@ -1,0 +1,13 @@
+<ul id="nav">
+    <?php { foreach($menu as $item): ?>
+        <li class="level<?php echo $item['level']; ?> nav-1 level-top first parent">
+            <a href ="<?php echo $item['url']; ?>">
+            <?php echo $item['title']; ?>
+            </a>
+            <?php if(!is_null($item['items'])) {
+                $menu = $item['items'];
+                include("menu.html");}
+            ?>
+        </li>
+    <?php endforeach; } ?>
+</ul>

@@ -1,0 +1,19 @@
+
+<div class="special">
+    <div style="visibility: visible;" id="mix_container" class="mix_container">
+
+        <h1 class="category_page_title"><?php echo $categoryTitle; ?></h1>
+        <div id="container" class="mix_wrapper">
+
+            <div>
+                <?php foreach( $goods as $d => $item): ?>
+
+                <?php include("layouts/product.html");?>
+
+                <?php endforeach; ?>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+   </div>
