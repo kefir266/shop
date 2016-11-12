@@ -1,0 +1,33 @@
+<div class="order-accept">
+    <table>
+        <thead>
+            <tr>
+                <td>N</td><td style="visibility: hidden"></td><td>Товар</td><td>Количество</td><td>Цена</td><td>Cумма</td>
+            </tr>
+
+        </thead>
+        <tbody>
+
+        <?php  foreach($this->cartContent  as $ind =>$row): ?>
+        <tr class="row-cart">
+
+            <td class="row-cart-ind"><?php  echo $ind ?></td>
+            <td class="row-cart-id" style="visibility: hidden"><?php  echo $row['id'] ?></td>
+            <td class="row-cart-title"><?php  echo $row['title'] ?></td>
+            <td class="row-cart-count"><input value="<?php  echo $row['count'] ?>"></td>
+            <td class="row-cart-price"><?php  echo $row['price'] ?></td>
+            <td class="row-cart-sum"><?php  echo $row['sum'] ?></td>
+
+        </tr>
+        <?php endforeach; ?>
+
+        </tbody>
+    </table>
+    <button class="submit-cart">Оформить заказ</button>
+
+    <script src="../js/order.js" type="text/javascript"></script>
+</div>
+
+<div class="thank-you" style="visibility: hidden">
+    <h1>Спасибо за покупку!</h1>
+</div>
