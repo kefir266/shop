@@ -42,7 +42,7 @@ class DB_Conector
     public function query($query){
         $result = null;
         if (!($result = self::$_db_connector->query($query)))
-            echo 'Query error!';
+            echo 'Query error! '.$query;
         return $result;
     }
 

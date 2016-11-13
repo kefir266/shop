@@ -8,7 +8,10 @@
 //require ("model/Buy.php");
 
 if ($itemId = $_POST['id']){
-    session_start();
+
+	if (session_status() == PHP_SESSION_NONE) {
+        	session_start();
+    	}	
 
     ++$_SESSION['cartGoods'][$itemId];
 

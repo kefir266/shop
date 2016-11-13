@@ -22,7 +22,7 @@ class Order extends DB_Conector
 
         foreach( $order as $id => $item) {
             //$this->writeLog(print_r($id,true)." ".print_r($item,true));
-            $query = "INSERT INTO Orders (product_id, count, price, sum, user_id) VALUES (
+            $query = "INSERT INTO orders (product_id, count, price, sum, user_id) VALUES (
                 ".$item['id'].",
                 ".$item['count'].",
                 ".$item['price'].",
