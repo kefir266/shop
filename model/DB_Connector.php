@@ -14,7 +14,9 @@ class DB_Conector
 
     public function __construct()
     {
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
         self::$log_file = $_SERVER['DOCUMENT_ROOT']."/log/db.log";
 
         self::$_db_connector = mysqli_connect(

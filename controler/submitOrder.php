@@ -9,7 +9,9 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/model/Order.php");
 
 if ($itemId = $_POST['order']) {
-    session_start();
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
 
     //print_r ("200");
     $order = $_POST['order'];
