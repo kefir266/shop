@@ -28,6 +28,8 @@ class DB_Conector
             echo $err;
             $this->writeLog($err);
         }
+	self::$_db_connector->query("SET NAMES 'utf8");
+	self::$_db_connector->query("SET CHARACTER SET 'utf8'");
 
     }
 
